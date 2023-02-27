@@ -1,22 +1,15 @@
-a , b = map(int, input().split())
-c = int(input())
+a, b, c = map(int, input().split())
+reward = 0
 
-A = 0
-B = 0
+if a == b == c:
+    reward = 10000 + (a*1000)
+elif a == b:
+    reward = 1000 + (a*100)
+elif a == c:
+    reward = 1000 + (a*100)
+elif b == c:
+    reward = 1000 + (b*100)
+else:
+    reward = (100 * max(a,b,c))
 
-mok = 0
-na = 0
-
-if (b + c) // 60 == 0:
-    A = a
-    B = (b+c)
-
-if (b + c) // 60 > 0:
-    mok = (b+c) // 60
-    na = (b+c) % 60
-    A = a + mok
-    B = na
-    if A >= 24:
-        A = A-24
-
-print(A, B)
+print(reward)
