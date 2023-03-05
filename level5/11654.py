@@ -1,1 +1,1 @@
-a = input()
+print(ord(input()))
