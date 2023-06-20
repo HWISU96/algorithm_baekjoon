@@ -1,4 +1,4 @@
-while 1:
+while True:
     li = sorted(list(map(int, input().split())))
     if li[0] == li[1] == li[2] == 0:
         break
